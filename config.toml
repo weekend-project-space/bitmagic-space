@@ -12,6 +12,7 @@ name = "syui"
 [permalinks]
 
 [params]
+baiduAnalyticsID = '69748c135beab0a8530e9c8397f68d24'
 sites = { "video" = [
     { "category" = "影视", "id" = "video", "icon" = "fa fa-video-camera", "sites" = [
         { "name" = "Youtube", "url" = "https://www.youtube.com/", "mark" = "nya-btn gfw badge", "title" = "" },

@@ -71,6 +71,20 @@
 
   </script>
   {{end}}
+
+  {{with .Site.Params.baiduAnalyticsID }}
+  <script>
+    if (!window.location.hostname.includes('localhost')) {
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?{{.Site.Params.baiduAnalyticsID}}";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    }
+  </script>
+  {{end}}
 </head>
 
 <body class="nav-closed">
