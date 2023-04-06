@@ -5,8 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta property="og:title" content="{{ if ne .RelPermalink " /" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title
-    }}" />
+  <meta property="og:title" content="{{ if ne .RelPermalink " /" }} {{ .Title }} {{ end }} {{ .Site.Title }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
 
