@@ -1,0 +1,185 @@
+{{ partial "header.html" . }}
+
+{{if .Site.Params.cover}}
+<header class="main-header " style="background-image: url({{.Site.BaseURL}}{{.Site.Params.cover}})">
+
+    {{else}}
+    <header class="main-header no-cover">
+        {{end}}
+
+
+        <nav class="main-nav overlay clearfix">
+            {{ if .Site.Params.logo }}
+            <a class="blog-logo" href="/">{{ .Site.Title }}</a>
+            {{end}}
+            <!--
+        {{ if .Site.Menus.main }}
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        {{else}}
+            {{ if .Site.Params.RSSLink}}
+              <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+            {{else}}
+              <a class="menu-button icon-feed" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}">&nbsp;&nbsp;Subscribe</a>
+            {{end}}
+        {{end}}
+        -->
+        </nav>
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="page-title">
+                    <a class="btn-bootstrap-2 title-scroll" href="#content">{{ .Site.Title }}</a>
+                </h1>
+                <h2 class="page-description">{{ .Site.Params.description }}</h2>
+            </div>
+        </div>
+        <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+    </header>
+
+    <main id="content" class="content " role="main">
+        <div class="inner">
+            <div class="subtitle c-tags">AI</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.mysites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+            </ul>
+            <div class="subtitle c-tags">音乐</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.music}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">视频</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.video}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">二次元</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.QAQ}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">新闻</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.news}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">阅读</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.read}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">数码</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.digital}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">设计</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.design}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">云盘</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.pan}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">云盘搜索</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.panso}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">软件</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.soft}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+
+            <div class="subtitle c-tags">学习</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.study}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+            <div class="subtitle c-tags">学校</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.sites.school}}
+                {{ range $index, $item := $item.sites}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+                {{end}}
+            </ul>
+        </div>
+
+
+
+
+    </main>
+
+    {{ partial "footer.html" . }}

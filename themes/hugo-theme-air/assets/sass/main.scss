@@ -1,0 +1,71 @@
+:root {
+  --gray-900: #262829;
+  --gray-500: #454c4e;
+  --gray-400: #707d83;
+  --gray-200: #cad2d6;
+  --gray-100: #eff2f3;
+
+  --blue-700: #0053b3;
+  --blue-600: #0063c5;
+  --blue-500: #0076ff;
+  --blue-400: #4d9fff;
+  --blue-200: #b3d6ff;
+  --blue-100: #e5f1ff;
+  --blue-50: #f4f9ff;
+  --light-slate: #a8b2d1;
+  --main-color : #dc3545;
+
+  --font-stack: 'Poppins';
+}
+
+.c-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // margin-top: -1.6rem;
+
+  @media (max-width: 40em) {
+    margin-top: 0;
+  }
+}
+
+.c-tags__item {
+  margin: 0 0.8rem 0.8rem 0;
+}
+
+.c-tags__label, .link {
+  background: var(--gray-100);
+  border-radius: 0.4rem;
+  color: var(--gray-500);
+  display: block;
+  font-size: .813rem;
+  letter-spacing: 0.01rem;
+  padding: 0 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+}
+
+a.c-tags__label:hover ,a.link:hover{
+  background-color: var(--blue-500);
+  border: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lead + .c-tags {
+  margin-top: -1.6rem;
+}
+
+.center{
+  text-align: center;
+}
+
+a.sub{
+  color: #666;
+}
+.dark-theme a.sub{
+  color: #eee;
+}
