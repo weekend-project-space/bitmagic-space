@@ -45,6 +45,14 @@
                 </li>
                 {{end}}
             </ul>
+            <div class="subtitle c-tags">Tool</div>
+            <ul class="c-tags mt-3">
+                {{ range $index, $item := .Site.Params.tools}}
+                <li class="c-tags__item">
+                    <a class="c-tags__label" href="{{.url}}">{{.name}}</a>
+                </li>
+                {{end}}
+            </ul>
             <div class="subtitle c-tags">音乐</div>
             <ul class="c-tags mt-3">
                 {{ range $index, $item := .Site.Params.sites.music}}

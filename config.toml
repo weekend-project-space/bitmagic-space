@@ -602,6 +602,7 @@ mysites = [
     { "name" = "aihub", "url" = "https://aihub.bitmagic.space/" },
     { "name" = "chat-gpt-online", "url" = "https://weekendproject.space/chat-gpt-online.html" },
 ]
+tools = [{ "name" = "mdx", "url" = "/mdx" }]
 cover = "images/user.jpg"
 logo = "images/user.png"
 # googleAnalyticsUserID = ""
